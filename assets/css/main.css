@@ -1,0 +1,94 @@
+.sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    overflow-x: hidden;
+    padding-top: 0;
+    transition: 0.5s;
+    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.sidenav a:hover {
+    background-color: #ccc;
+    cursor: pointer;
+    color: #828282;
+}
+
+.sidenav a:nth-child(2) {
+    margin-top: 2.5em;
+}
+
+.sidenav .closebtn {
+    float: right;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-top: 0;
+}
+
+.shortNav {
+    display: none;
+    height: 100%;
+    width: 5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    overflow-x: hidden;
+    padding-top: 0;
+    transition: 0.5s;
+    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+}
+
+.shortNav a {
+    color: #818181;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+.shortNav a i {
+    padding-top: 1em;
+}
+
+.container {
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.card {
+    margin-top: 5%;
+    padding-bottom: 3%;
+    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+}
+
+.card.results {
+    display: none;
+}
+
+.card button {
+    margin-top: 3%;
+    width: 100%;
+    font-size: 25px;
+}
