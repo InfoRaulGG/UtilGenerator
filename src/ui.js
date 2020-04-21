@@ -1,6 +1,6 @@
 const nav = document.querySelector("#sidenav");
 const shortNav = document.querySelector("#shortNav");
-
+const loader = document.querySelector("#loader");
 
 const hideNav = () => {
     shortNav.animate([
@@ -14,6 +14,7 @@ const hideNav = () => {
     nav.style.display = "none";
     shortNav.style.display = "block";
 }
+
 const showNav = () => {
     nav.animate([
         { transform: 'translateX(-.5em)' },
@@ -35,3 +36,11 @@ const activeOneLink = lnk => {
         }
     });
 };
+
+const showLoader = () => {
+    loader.style.display = "block";
+}
+
+const hideLoader = () => {
+    loader.style.display = "none";
+}

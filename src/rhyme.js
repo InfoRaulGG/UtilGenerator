@@ -1,23 +1,46 @@
 //Attrs
-const url = "https://www.datamuse.com/api/";
+const url = "https://api.datamuse.com/words";
 const queryMaps = "?rel_rhy=";
+const proxyCors = "https://cors-anywhere.herokuapp.com/";
 var inputField;
 var btnRhyme;
+var pnlResultsRhyme;
 
 // onInit
 const onLoadRhyme = () => {
     inputField = document.querySelector("#wordRhymeInput");
     btnRhyme = document.querySelector("#btnRhyme");
+    pnlResultsRhyme = document.querySelector("#pnlResultsRhyme")
+
 
     inputField.addEventListener("keydown", validateInputWord);
+    inputField.addEventListener("keyup", validateInputWord);
     inputField.addEventListener("change", validateInputWord);
     btnRhyme.addEventListener("click", rhymeCalculate);
 }
 
 // Actions
-const rhymeCalculate = () => {
+const rhymeCalculate = async() => {
+    showLoader();
     const rhymeResults = document.querySelector("#rhymeResults");
     rhymeResults.style.display = "block";
+    const endpoint = url + queryMaps + inputField.value;
+    try {
+        const response = await fetch(proxyCors + endpoint, {
+            method: "GET",
+            mode: 'cors',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            },
+            cache: "no-cache",
+            dataType: 'json',
+        });
+        let data = await response.json();
+        printRhymes(data);
+    } catch (error) {
+        console.log(error);
+    }
+    hideLoader();
 }
 
 
@@ -33,3 +56,21 @@ const validateInputWord = () => {
         btnRhyme.disabled = true;
     }
 }
+const printRhymes = (data) => {
+    data = data.slice(0, 10);
+
+    if (!data.length) {
+        pnlResultsRhyme.innerHTML = "<p>Try again!</p><p>There were no suggestions found!</p>";
+        return;
+    }
+
+    let wordList = [];
+    for (let i = 0; i < Math.min(data.length, 10); i++) {
+        // creating a list of words
+        wordList.push(`<li>${data[i].word}</li>`);
+    }
+
+    wordList = wordList.join("");
+    pnlResultsRhyme.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+    return;
+};

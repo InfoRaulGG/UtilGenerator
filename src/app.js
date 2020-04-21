@@ -23,7 +23,6 @@ const rhymeCharge = () => {
         </div>
         <div class="card-body">
             <h5 class="card-title">We provided a generator that calculate a 10 words what rhymes</h5>
-            <p class="card-text">Insert here the word that you want.</p>
             <input type="text" class="form-control" id="wordRhymeInput" placeholder="Word" >
             <button id="btnRhyme" disabled="" type="button" class="btn btn-outline-primary">Search!</button>
         </div>
@@ -32,9 +31,10 @@ const rhymeCharge = () => {
     <div class="card p-3 results" id="rhymeResults">
         <blockquote class="">
         <p>Results view:</p>
+        <div id="pnlResultsRhyme" class="pnlResultsRhyme"></div>
         <footer class="blockquote-footer text-right">
             <small class="text-muted">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Powered by <cite title="Source Title">DataMuse</cite>
             </small>
         </footer>
         </blockquote>
