@@ -23,7 +23,6 @@ const onLoadRhyme = () => {
 const rhymeCalculate = async() => {
     showLoader();
     const rhymeResults = document.querySelector("#rhymeResults");
-    rhymeResults.style.display = "block";
     const endpoint = url + queryMaps + inputField.value;
     try {
         const response = await fetch(proxyCors + endpoint, {
@@ -38,6 +37,7 @@ const rhymeCalculate = async() => {
         let data = await response.json();
         printRhymes(data);
     } catch (error) {
+        showErrorPanel();
         console.log(error);
     }
     hideLoader();
@@ -58,7 +58,7 @@ const validateInputWord = () => {
 }
 const printRhymes = (data) => {
     data = data.slice(0, 10);
-
+    rhymeResults.style.display = "block";
     if (!data.length) {
         pnlResultsRhyme.innerHTML = "<p>Try again!</p><p>There were no suggestions found!</p>";
         return;
@@ -74,3 +74,10 @@ const printRhymes = (data) => {
     pnlResultsRhyme.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
     return;
 };
+
+const showErrorPanel = () => {
+    pnlResultsRhyme.innerHTML = `
+    <p>Try again!</p><p>Anything not work! Mudkip is trying to fix!</p>
+    <img style="width: 150px;" src="./assets/img/fail-pokemon.gif">
+    `
+}

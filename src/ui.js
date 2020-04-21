@@ -4,7 +4,7 @@ const loader = document.querySelector("#loader");
 
 const hideNav = () => {
     shortNav.animate([
-        { transform: 'translateX(-.5em)' },
+        { transform: 'translateX(-.1em)' },
         { transform: 'translateX(0)' }
     ], {
         duration: 500, // number in ms [this would be equiv of your speed].
@@ -17,7 +17,7 @@ const hideNav = () => {
 
 const showNav = () => {
     nav.animate([
-        { transform: 'translateX(-.5em)' },
+        { transform: 'translateX(-.1em)' },
         { transform: 'translateX(0)' }
     ], {
         duration: 500, // number in ms [this would be equiv of your speed].

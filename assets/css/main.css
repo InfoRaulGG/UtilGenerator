@@ -1,3 +1,7 @@
+input:focus {
+    border-color: inherit;
+}
+
 .loader {
     display: none;
     position: absolute;
@@ -135,6 +139,7 @@
 
 .card.results {
     display: none;
+    margin-bottom: 5%;
 }
 
 .card button {
@@ -151,8 +156,8 @@
     border-color: red !important;
 }
 
-input:focus {
-    border-color: inherit;
+.pnlResultsRhyme {
+    text-align: center;
 }
 
 @-webkit-keyframes load3 {
