@@ -28,6 +28,6 @@ app.all('*', function(req, res) {
 app.use('/', router);
 
 const server = https.createServer(options, app);
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log("server starting on port : " + PORT)
 });
