@@ -26,3 +26,12 @@ const showNav = () => {
     nav.style.display = "block";
     shortNav.style.display = "none";
 }
+
+const activeOneLink = lnk => {
+    routeActions.forEach((i) => {
+        let element = document.querySelector(`#${i}`);
+        if (element) {
+            lnk === i ? element.classList.add("active-link") : element.classList.remove("active-link");
+        }
+    });
+};
