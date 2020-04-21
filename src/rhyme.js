@@ -67,11 +67,11 @@ const printRhymes = (data) => {
     let wordList = [];
     for (let i = 0; i < Math.min(data.length, 10); i++) {
         // creating a list of words
-        wordList.push(`<li>${data[i].word}</li>`);
+        wordList.push(`<li class="list-group-item">${data[i].word}</li>`);
     }
 
     wordList = wordList.join("");
-    pnlResultsRhyme.innerHTML = `<p>You might be interested in:</p><ol>${wordList}</ol>`;
+    pnlResultsRhyme.innerHTML = `<p>You might be interested in:</p><ul class="list-group list-group-flush">${wordList}</ol>`;
     return;
 };
 

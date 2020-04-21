@@ -129,12 +129,18 @@ input:focus {
     padding-top: 3%;
 }
 
+.example-image {
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
 .card {
     margin-top: 5%;
     padding-bottom: 3%;
-    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
 .card.results {
@@ -154,6 +160,23 @@ input:focus {
 
 .no-valid {
     border-color: red !important;
+}
+
+.pnlHome {
+    margin-top: 5%;
+}
+
+.example-image {
+    width: 100%;
+}
+
+.example-image:hover {
+    cursor: pointer;
+    width: 105%;
+}
+
+.results ul li {
+    font-weight: bold;
 }
 
 .pnlResultsRhyme {
