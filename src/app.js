@@ -29,11 +29,14 @@ const homeCharge = () => {
             <div class="col-12 col-md-6">
                 <h5 class="my-2">Rhyme Generator</h5>
                 <div>
-                    <img src="/assets/img/rhyme-example.png" data-high-res-src="/assets//img/rhyme-example-big.png" onclick="expandImg(event)" class="example-image" alt="">
+                    <img src="/assets/img/rhyme-example.png" data-high-res-src="/assets//img/rhyme-example-big.png"  class="example-image" alt="">
                 </div>
             </div>
-            <div class="col-12 col-md-12">
-    
+            <div class="col-12 col-md-6">
+                <h5 class="my-2">URL Shorten</h5>
+                <div>
+                    <img src="/assets/img/urlShorten-example.png" data-high-res-src="/assets//img/rhyme-example-big.png"  class="example-image" alt="">
+                </div>
             </div>
         </div>
         <div id="footerHome" class="my-5">

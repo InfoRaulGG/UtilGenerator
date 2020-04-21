@@ -44,11 +44,3 @@ const showLoader = () => {
 const hideLoader = () => {
     loader.style.display = "none";
 }
-
-const expandImg = (e) => {
-    const img = e.target.src;
-    const highRes = $(e.target).data('high-res-img');
-    const viewer = new FullScreenViewer();
-
-    viewer.show(img);
-}
