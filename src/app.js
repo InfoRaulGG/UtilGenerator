@@ -1,7 +1,7 @@
 // Attrs
 const container = document.querySelector("#content");
 const routes = ["/", "/rhyme", "/url"];
-const routeActions = ["lnkHome", "lnkRhyme", "lnkUrl"];
+const routeActions = ["lnkHome", "lnkRhyme", "lnkUrlShorten"];
 
 // Events
 window.onload = () => {
@@ -62,7 +62,7 @@ const rhymeCharge = () => {
     <div class="card p-3 results" id="rhymeResults">
         <blockquote class="">
         <p>Results view:</p>
-        <div id="pnlResultsRhyme" class="pnlResultsRhyme"></div>
+        <div id="pnlResultsRhyme" class="pnlResults"></div>
         <footer class="blockquote-footer text-right">
             <small class="text-muted">
             Powered by <cite title="Source Title">DataMuse</cite>
@@ -74,3 +74,34 @@ const rhymeCharge = () => {
     onLoadRhyme();
     activeOneLink("lnkRhyme");
 }
+
+const urlShortenCharge = () => {
+    container.innerHTML = `
+    <h1>UrlShorten</h1>
+    <div class="card">
+        <div class="card-header">
+            Short your URL!
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">We provide a generator that allows you to encapsulate your URLs in a short and discreet way</h5>
+            <input type="text" class="form-control" id="urlShortenInput" placeholder="Place you URL here! Make sure that if a valid format. Protocol is needed (http or https)">
+            <button id="btnUrlShorten" disabled="" type="button" class="btn btn-outline-primary">Short it!</button>
+        </div>
+    </div>
+
+    <div class="card p-3 results" id="urlShortenResults">
+        <blockquote class="">
+            <p>Results view:</p>
+            <div id="pnlResultsUrlShorten" class="pnlResults"></div>
+            <footer class="blockquote-footer text-right">
+                <small class="text-muted">
+                Powered by <cite title="Source Title">Rebrand</cite>
+                </small>
+            </footer>
+        </blockquote>
+    </div>
+    `
+
+    onLoadUrlShorten();
+    activeOneLink("lnkUrlShorten");
+};

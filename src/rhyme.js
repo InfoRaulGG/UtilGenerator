@@ -34,8 +34,13 @@ const rhymeCalculate = async() => {
             cache: "no-cache",
             dataType: 'json',
         });
-        let data = await response.json();
-        printRhymes(data);
+        if (response.ok) {
+            let data = await response.json();
+            printRhymes(data);
+        } else {
+            showErrorPanel();
+        }
+
     } catch (error) {
         showErrorPanel();
         console.log(error);
