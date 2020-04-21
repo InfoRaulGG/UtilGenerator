@@ -1,13 +1,20 @@
+// Attrs
 const container = document.querySelector("#content");
+const routes = ["/", "/rhyme", "/url"];
+const routeActions = ["lnkHome", "lnkRhyme", "lnkUrl"];
 
 // Events
-window.onhashchange = () => {
-    console.log(window.location);
+window.onload = () => {
+
+
 }
 
+// Routes Charge
+const homeCharge = () => {
 
-const rhymeCharge = (e) => {
-    e.preventDefault();
+};
+
+const rhymeCharge = () => {
     container.innerHTML = `
     <h1>Rhyme Generator</h1>
     <div class="card">
@@ -18,24 +25,31 @@ const rhymeCharge = (e) => {
             <h5 class="card-title">We provided a generator that calculate a 10 words what rhymes</h5>
             <p class="card-text">Insert here the word that you want.</p>
             <input type="text" class="form-control" id="wordRhymeInput" placeholder="Word" >
-            <button type="button" class="btn btn-outline-primary" onclick="rhymeCalculate();">Search!</button>
+            <button id="btnRhyme" disabled="" type="button" class="btn btn-outline-primary">Search!</button>
         </div>
     </div>
 
-    <div class="card p-3 text-right results" id="rhymeResults">
-        <blockquote class="blockquote mb-0">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        <footer class="blockquote-footer">
+    <div class="card p-3 results" id="rhymeResults">
+        <blockquote class="">
+        <p>Results view:</p>
+        <footer class="blockquote-footer text-right">
             <small class="text-muted">
             Someone famous in <cite title="Source Title">Source Title</cite>
             </small>
         </footer>
         </blockquote>
     </div>
-`
+    `
+    onLoadRhyme();
+    activeOneLink("lnkRhyme");
 }
 
-const rhymeCalculate = () => {
-    const rhymeResults = document.querySelector("#rhymeResults");
-    rhymeResults.style.display = "block";
-}
+// Aux methods
+const activeOneLink = lnk => {
+    routeActions.forEach((i) => {
+        let element = document.querySelector(`#${i}`);
+        if (element) {
+            lnk === i ? element.classList.add("active-link") : element.classList.remove("active-link");
+        }
+    });
+};

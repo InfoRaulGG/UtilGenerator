@@ -9,9 +9,9 @@
     overflow-x: hidden;
     padding-top: 0;
     transition: 0.5s;
-    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .sidenav a {
@@ -26,10 +26,11 @@
     padding-bottom: 0.2em;
 }
 
-.sidenav a:hover {
+.sidenav a:hover,
+.active-link {
     background-color: #ccc;
     cursor: pointer;
-    color: #828282;
+    color: black !important;
 }
 
 .sidenav a:nth-child(2) {
@@ -37,10 +38,17 @@
 }
 
 .sidenav .closebtn {
-    float: right;
     font-size: 2em;
-    padding-right: 0.5em;
     padding-top: 0;
+    border-bottom: 1px solid #cccc;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.sidenav .closebtn:hover {
+    background-color: inherit;
+    color: #007bff;
+    font-size: 2.01em;
 }
 
 .shortNav {
@@ -55,9 +63,16 @@
     overflow-x: hidden;
     padding-top: 0;
     transition: 0.5s;
-    -webkit-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
-    box-shadow: -2px 1px 44px -22px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
+
+.shortNav .menu-burguer {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .shortNav a {
@@ -66,8 +81,19 @@
     padding: 1em;
 }
 
+.shortNav a:hover,
+.shortNav a:active {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1.55em;
+}
+
 .shortNav a i {
     padding-top: 1em;
+}
+
+.shortNav a:nth-child(2) {
+    margin-top: 2.5em;
 }
 
 .container {
@@ -91,4 +117,12 @@
     margin-top: 3%;
     width: 100%;
     font-size: 25px;
+}
+
+.valid {
+    border-color: green !important;
+}
+
+.no-valid {
+    border-color: red !important;
 }
