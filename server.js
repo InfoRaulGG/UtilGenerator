@@ -15,6 +15,6 @@ app.all('*', function(req, res) {
 
 //add the router
 app.use('/', router);
-app.listen(8080);
+app.set('port', (process.env.PORT || 8080));
 
 console.log('Running at Port 8080');
