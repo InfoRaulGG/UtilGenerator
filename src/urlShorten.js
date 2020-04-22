@@ -13,6 +13,7 @@ const onLoadUrlShorten = () => {
     inputUrlField.addEventListener("keydown", validateInputUrl);
     inputUrlField.addEventListener("keyup", validateInputUrl);
     inputUrlField.addEventListener("change", validateInputUrl);
+    inputUrlField.addEventListener("focus", closeNavIfOpen);
     btnUrlShorten.addEventListener("click", shortenUrl);
 };
 
