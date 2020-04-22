@@ -1,5 +1,7 @@
 // Attrs
 const container = document.querySelector("#content");
+const navCollapse = document.querySelector("#navbarToggleExternalContent");
+
 const routes = ["/", "/rhyme", "/url"];
 const routeActions = ["lnkHome", "lnkRhyme", "lnkUrlShorten"];
 
