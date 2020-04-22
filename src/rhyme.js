@@ -16,6 +16,7 @@ const onLoadRhyme = () => {
     inputField.addEventListener("keydown", validateInputWord);
     inputField.addEventListener("keyup", validateInputWord);
     inputField.addEventListener("change", validateInputWord);
+    inputField.addEventListener("focus", closeNavIfOpen);
     btnRhyme.addEventListener("click", rhymeCalculate);
 }
 
