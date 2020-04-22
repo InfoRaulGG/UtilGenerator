@@ -27,13 +27,13 @@ const homeCharge = () => {
         <h2 class="my-3">Examples</h2>
         <div class="row my-3">
             <div class="col-12 col-md-6">
-                <h5 class="my-2">Rhyme Generator</h5>
+                <h5 class="my-3">Rhyme Generator</h5>
                 <div>
                     <img src="/assets/img/rhyme-example.png" data-high-res-src="/assets//img/rhyme-example-big.png"  class="example-image" alt="">
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <h5 class="my-2">URL Shorten</h5>
+                <h5 class="my-3">URL Shorten</h5>
                 <div>
                     <img src="/assets/img/urlShorten-example.png" data-high-res-src="/assets//img/rhyme-example-big.png"  class="example-image" alt="">
                 </div>
@@ -80,7 +80,7 @@ const rhymeCharge = () => {
 
 const urlShortenCharge = () => {
     container.innerHTML = `
-    <h1>UrlShorten</h1>
+    <h1>URL Shortener</h1>
     <div class="card">
         <div class="card-header">
             Short your URL!

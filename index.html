@@ -12,6 +12,7 @@
     <title>Util Generator</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" type="" href="./assets/css/main.css" />
 </head>
@@ -23,10 +24,30 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
+
     <div class="container row">
 
+        <div class="pos-f-t navMobile">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark list-group navCollapseItems" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a onclick="homeCharge()" id="lnkHomeMobile" class="list-group-item list-group-item-action"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="rhymeCharge()" id="lnkRhymeMobile" class="list-group-item list-group-item-action"><i class="fab fa-wordpress"></i> Rhyme Generator</a>
+                    <a onclick="urlShortenCharge()" id="lnkUrlShortenMobile" class="list-group-item list-group-item-action"><i class="fas fa-link"></i> URL Shorten</a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+              </button>
+            </nav>
+        </div>
+
         <div id="sidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="hideNav()">Random-Gen!</a>
+
+            <img src="./assets/img/favicon.png" class="logo-image" alt="" onclick="hideNav()">
+            <a href="javascript:void(0)" class="closebtn" onclick="hideNav()">
+                 Random-Gen!
+            </a>
             <a onclick="homeCharge()" id="lnkHome">Home</a>
             <a onclick="rhymeCharge()" id="lnkRhyme">Rhyme Generator</a>
             <a onclick="urlShortenCharge()" id="lnkUrlShorten">URL Shorten</a>
@@ -39,7 +60,7 @@
             <a onclick="rhymeCharge()"><i class="fab fa-wordpress"></i></a>
             <a href="#"><i class="fas fa-link"></i></a>
         </div>
-        <div class="col-11 offset-1 col-xl-9 offset-xl-3">
+        <div class="col-12 col-xl-9 offset-xl-3">
             <div id="content">
 
             </div>
