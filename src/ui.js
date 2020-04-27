@@ -47,5 +47,5 @@ const hideLoader = () => {
 
 
 const closeNavIfOpen = () => {
-    navCollapse.classList.contains("show") ? navCollapse.classList.remove("show") : none;
+    navCollapse.classList.contains("show") ? navCollapse.classList.remove("show") : "";
 };
