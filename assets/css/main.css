@@ -16,6 +16,14 @@ h5 {
     color: #63666e;
 }
 
+body {
+    background-color: #ececec;
+}
+
+.container.container-side {
+    max-width: 960px;
+}
+
 .loader {
     display: none;
     position: absolute;
@@ -48,7 +56,7 @@ h5 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #eee;
+    background-color: #fff;
     overflow-x: hidden;
     padding-top: 0;
     transition: 0.5s;
@@ -144,11 +152,6 @@ h5 {
     margin-top: 2.5em;
 }
 
-.container {
-    margin-left: 7%;
-    padding-top: 3%;
-}
-
 .example-image {
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
@@ -163,15 +166,22 @@ h5 {
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card.results {
+.card.card-home {
+    padding-bottom: 0;
+}
+
+.card.card-home .card-body {
+    padding-left: 2.7rem;
+    padding-right: 1.7rem;
+}
+
+.results {
     display: none;
     margin-bottom: 5%;
 }
 
 .card button {
-    margin-top: 3%;
     width: 100%;
-    font-size: 25px;
 }
 
 .valid {
@@ -208,6 +218,12 @@ h5 {
 }
 
 @media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .card button {
+        margin-top: 5%;
+    }
     .navMobile {
         display: block;
         position: fixed;
@@ -221,7 +237,7 @@ h5 {
         box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
     }
     .navMobile .navbar {
-        background-color: #eee;
+        background-color: #fff;
         height: 100%;
     }
     .navMobile .collapse.show a {
@@ -241,6 +257,23 @@ h5 {
     .navMobile .navbar button {
         border: 1px outset #ccc;
         border-radius: .3em;
+    }
+    .navMobile .logo-mobile {
+        margin-top: .5em;
+    }
+    .navMobile .logo-mobile span {
+        background: repeating-linear-gradient( to bottom, #0f0a1e, #0f0a1e 2px, lighten(#0f0a1e, 3%) 2px, lighten(#0f0a1e, 3%) 4px);
+        font-size: 15px;
+        font-family: 'Press Start 2P', cursive;
+        color: #1966ff;
+        animation: blink 1s steps(4, start) infinite;
+        display: inline-block;
+        margin-right: 1em;
+    }
+    .navMobile .logo-mobile img {
+        width: 32px;
+        margin-top: -0.3em;
+        margin-left: -1em;
     }
     .sidenav {
         display: none;
@@ -286,3 +319,5 @@ h5 {
         transform: rotate(360deg);
     }
 }
+
+@keyframes blink to visibility: hidden
